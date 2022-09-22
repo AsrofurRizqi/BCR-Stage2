@@ -1,0 +1,235 @@
+@media only screen and (max-width: 600px) {
+    .img-fluid {
+        width: 330px;
+    }
+    .whyus {
+        text-align: center;
+    }
+    .faq-header {
+        text-align: center;
+    }
+    .form-cars {
+        margin-top: -20px !important;
+    }
+  }
+/* body */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body {
+    background-color: white;
+    overflow-x: hidden;
+}
+body {
+    position: relative
+  }
+/* navbar */
+.navbar {
+    background-color: #F1F3FF;
+}
+.navbar-brand {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nav-item .btn a{
+    height: 40px;
+    color: white;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+/* Navbar off canvas */
+.bs-canvas-overlay {
+    opacity: 0;
+    z-index: -1;
+ }
+ 
+ .bs-canvas-overlay.show {
+    opacity: 0.85;
+    z-index: 1100;
+ }
+ 
+ .bs-canvas {
+    top: 0;
+    width: 0;
+    z-index: 1110;
+    overflow-x: hidden;
+    overflow-y: auto;
+ }
+ .bs-canvas-right {
+    right: 0;
+ }
+ 
+ .bs-canvas-anim {
+    transition: all .4s ease-out;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+ }
+/* list services*/
+ul {
+    list-style-image: url('./image/Group53.png');
+}
+li a{
+    top: -7px;
+    position: relative;
+}
+/* Whyus */
+/* .card-whyus {
+    width: 270px;
+} */
+/* main jumbotron */
+.banner-utama {
+    background-color: #F1F3FF !important;
+    padding-bottom: 0px !important;
+}
+.card {
+    margin-top: 40px;
+}
+.banner-sewa{
+    border-radius: 15px !important;
+    background-color: darkblue !important;
+}
+.banner-sewa h1 {
+    color: white;
+}
+.banner-img {
+    width: 100%;
+    object-fit: contain;
+    background-image: none;
+    margin-left: 15px;
+}
+/* Form Cars */
+.form-cars{
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    margin-top: -50px;
+    background-color: white;
+    position: relative;
+}
+.input {
+    flex: 0 0 220px;
+    max-width: 220px;
+    margin-right: 16px;
+}
+.btn-cari {
+    flex: 0 0 100px;
+    max-width: 100px;
+    margin-top: 7px;
+    padding-right: 0px;
+}
+.form-row {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+select  {
+    appearance: none;
+}
+select :hover{
+    border-color: #5CB85F;
+}
+#input-driver {
+    background: url(./image/fi_chevron-down.png) no-repeat scroll 9px 9px;
+    background-position: 190px;
+    background-color: white;
+}
+#input-tanggal {
+    background: url(./image/fi_calendar.png) no-repeat scroll 9px 9px;
+    background-position: 190px;
+}
+#input-penumpang {
+    background: url(./image/fi_users.png) no-repeat scroll 9px 9px;
+    background-position: 190px;
+}
+#input-waktu {
+    background: url(./image/fi_clock.png) no-repeat scroll 9px 9px;
+    background-position: 190px;
+    background-color: white;
+}
+.form-control:focus{
+    border-color: #5CB85F !important;
+}
+/* Carousel testimony */
+.item .card {
+    background-color: #F1F3FF;
+}
+.btn-caro{
+    border: 1px solid black !important;
+    border-radius: 20px !important;
+}
+.btn-caro:hover{
+    background-color: #5CB85F;
+}
+.fa-star {
+    color: rgb(235, 200, 6);
+}
+.owl-carousel .owl-item img {
+    display: unset !important;
+    width: fit-content !important;
+}
+
+/* jumbotron banner sewa sekarang */
+.jumbotron-fluid h2 {
+    font-weight: bold;
+    color: white;
+}
+.jumbotron-fluid p {
+    color: white;
+}
+.card-title {
+    font-weight: bold;
+}
+.deskripsi {
+    width: 50%;
+    margin: auto;
+}
+/* collapse frequently ask */
+.collapsible-link {
+    width: 100%;
+    position: relative;
+}
+.collapsible-link::before {
+    content: '\f107';
+    position: absolute;
+    top: 20px;
+    right: 0.8rem;
+    transform: translateY(-50%);
+    display: block;
+    font-family: 'FontAwesome';
+}
+.card-faq {
+    margin-top: 0px;
+    border: 1px solid gray !important;
+    border-radius: 5px !important;
+}
+.card-faq a {
+    text-align: left;
+    text-decoration: none;
+}
+.collapsible-link[aria-expanded='true']::before {
+    content: '\f106';
+}
+/* Css Bagian Footer */
+footer {
+    margin-top: 120px;
+}
+.footer-menu a {
+    color: black !important;
+    font-weight: 400;
+    font-size: 14;
+}
+.icon-sosmed a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
