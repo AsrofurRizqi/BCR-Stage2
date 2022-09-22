@@ -128,17 +128,18 @@ li a{
     padding-right: 0px;
 }
 .form-row {
-    padding-left: 35px;
-    padding-right: 35px;
     padding-top: 24px;
     padding-bottom: 24px;
 }
 select  {
     appearance: none;
 }
-select :hover{
-    border-color: #5CB85F;
+.isi-select {
+    font-weight: 500
 }
+.selector option:hover{
+    background-color: #5CB85F !important;
+  }
 #input-driver {
     background: url(./image/fi_chevron-down.png) no-repeat scroll 9px 9px;
     background-position: 190px;
@@ -160,6 +161,12 @@ select :hover{
 .form-control:focus{
     border-color: #5CB85F !important;
 }
+.icon-cars {
+    margin-bottom: 4px;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }
 /* Carousel testimony */
 .item .card {
     background-color: #F1F3FF;

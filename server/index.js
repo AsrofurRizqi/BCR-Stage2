@@ -30,9 +30,6 @@ function onRequest(req, res) {
     }else if(req.url == "/cars") {
       res.writeHead(200)
       res.end(getHTML("carimobil.html"))
-    }else if(req.url == "/coba") {
-      res.writeHead(200)
-      res.end(getHTML("coba.html"))
     }else if(req.url.match('png.*|js.*|css.*|jpg.*') != null) {
       console.log(req.url);
       let extension = req.url.match('png.*|js.*|css.*|jpg.*')[0];

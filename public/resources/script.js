@@ -1,6 +1,14 @@
 // Aos init
 AOS.init();
 
+var input = document.getElementById("input-penumpang");
+var inputValue = document.getElementById("input-penumpang").value;
+
+input.addEventListener("keypress", function() {
+  inputValue = document.getElementById("input-penumpang").value;
+  // do something with it
+});
+
 var owl = $('.owl-carousel');
 owl.owlCarousel({
 	loop:true,
