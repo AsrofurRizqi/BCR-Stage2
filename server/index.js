@@ -1,5 +1,5 @@
 const http = require('http');
-const { PORT = 3030 } = process.env; //port server
+const { PORT = 3031 } = process.env; //port server
 
 const fs = require('fs');
 const path = require('path');

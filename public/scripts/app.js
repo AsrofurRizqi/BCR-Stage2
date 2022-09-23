@@ -1,24 +1,38 @@
 class App {
   constructor() {
     // this.clearButton = document.getElementById("clear-btn");
-    this.driver = document.getElementById("input-driver").value;
-    this.penumpang = document.getElementById("input-penumpang").value;
-    this.tanggal = document.getElementById("input-tanggal");
-    this.waktu = document.getElementById("input-waktu");
+
+    this.driver;
+    this.penumpang;
+    this.tanggal;
+    this.waktu;
+
     this.loadButton = document.getElementById("load-mobil");
     this.carContainerElement = document.getElementById("cars-container");
   }
 
   async init(filter) {
-    await this.load(filter);
 
     // Register click listener
     // this.clearButton.onclick = this.clear;
-    this.loadButton.onclick = this.run;
+
+    this.loadButton.onclick = () => {
+      const driver = document.getElementById("input-driver").value == 'true';
+      const penumpang = document.getElementById("input-penumpang").value;
+      const tanggal = document.getElementById("input-tanggal").value;
+      const waktu = document.getElementById("input-waktu").value;
+
+      this.driver = driver;
+      this.penumpang = parseInt(penumpang);
+      this.tanggal = tanggal;
+      this.waktu = waktu
+
+      this.load()
+    }
   }
 
   run = () => {
-    this.clear();
+    
     if(Car.list.length > 0){
       Car.list.forEach((car) => {
         const node = document.createElement("div");
@@ -36,16 +50,22 @@ class App {
      </div>`;
        this.carContainerElement.appendChild(warn);
     }
-    
+
   };
+
   //load data cars from json
   async load() {
-    let combineDate = new Date(`${this.tanggal.value} ${this.waktu.value}`);
-    let boolOutput = (this.driver === "true");
-    const cars = await Binar.listCars((a)=>{return a.available === boolOutput && a.capacity == this.penumpang && new Date(a.availableAt) > combineDate});
-    console.log(cars)
-    console.log(typeof(boolOutput))
+    let combineDate = new Date(`${this.tanggal} ${this.waktu}`);
+    let cars;
+    if (isNaN(this.penumpang)) {
+      cars = await Binar.listCars((a) =>  a.available === this.driver && a.availableAt > combineDate );
+    } else {
+      cars = await Binar.listCars((a) =>  a.available === this.driver && a.capacity == this.penumpang && a.availableAt > combineDate );
+    }  
+
     Car.init(cars);
+    this.clear();
+    this.run();
   }
 
   clear = () => {

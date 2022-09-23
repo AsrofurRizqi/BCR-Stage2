@@ -12,9 +12,6 @@ const params = Object.fromEntries(urlSearchParams.entries());
 
 const app = new App();
 app.init()
-function reinit(){
-    app.init();
-}
 
 
 
